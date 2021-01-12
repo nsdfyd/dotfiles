@@ -35,8 +35,8 @@ augroup netrw_mapping
 augroup END
 
 function! NetrwMapping() 
-				nmap <buffer> l <CR> 
-				nmap <buffer> h - 
+  nmap <buffer> l <CR> 
+  nmap <buffer> h - 
 endfunction
 
 autocmd BufEnter * silent! exec 'cd' fnameescape(fnamemodify(finddir('.git', 

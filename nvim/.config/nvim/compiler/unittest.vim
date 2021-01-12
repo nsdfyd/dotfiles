@@ -1,8 +1,3 @@
-" Vim compiler file
-" Compiler:	Unit testing tool for Python
-" Maintainer:	Max Ischenko <mfi@ukr.net>
-" Last Change: 2004 Mar 27
-
 if exists("current_compiler")
   finish
 endif
