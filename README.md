@@ -2,7 +2,7 @@
 
 My dotfiles repository.
 
-## Linking to your home dir
+## Usage
 
 I use `stow` for linking files from this repository to my home configs.
 
