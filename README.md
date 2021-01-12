@@ -1,8 +1,13 @@
 # dotfiles
 
-## Usage: 
+My dotfiles repository.
 
-1. Save to ```~/.dotfiles```
-2. ```stow nvim``` 
+## Usage
 
-Good luck
+I use `stow` for linking files from this repository to my home configs.
+
+```bash
+stow nvim
+```
+
+Also this repository should be placed in ~/.dotfiles. Otherwise above command shouldn't work.
