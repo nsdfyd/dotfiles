@@ -51,3 +51,16 @@ nnoremap <leader>bn :bn <CR>
 nnoremap <leader>bp :bp <CR> 
 nnoremap <leader>bd :bd <CR> 
 nnoremap <leader>lex :Lex 25 <CR>
+
+" TODO
+" hotkey to lint all project
+" hotkey to test all project
+" refactor compilers makeprg
+" ctags
+" ctags site-packages
+" completion
+" import completion
+" go to documentation hotkey
+" debug workflow
+" databases integration (table completion, viewer, fast queries)
+" other languages like javascript java scala
