@@ -1,4 +1,5 @@
 filetype plugin on 
+set nu
 set modifiable 
 set nobackup 
 set noswapfile
@@ -18,7 +19,8 @@ set clipboard^=unnamed,unnamedplus
 set fillchars+=vert:\ 
 
 let g:netrw_banner = 0
-let g:netrw_keepdir = 0
+let g:netrw_browse_split = 4
+"let g:netrw_keepdir = 0
 syntax on 
 colorscheme 256_noir
 
@@ -45,7 +47,8 @@ endfunction
 
 autocmd BufEnter * silent! exec 'cd' fnameescape(fnamemodify(finddir('.git', 
       \escape(expand('%:p:h'), ' ') . ';'), ':h'))
-autocmd VimEnter * :Lex 25 | wincmd l
+"autocmd VimEnter * :Lex 25 | wincmd l
+"autocmd TerminalOpen * set nonu
 
 let mapleader = "\<Space>"
 nnoremap <leader>term :terminal <CR> 
@@ -59,7 +62,10 @@ nnoremap <leader>bd :bd <CR>
 nnoremap <leader>lex :Lex 25 <CR>
 
 " TODO
-" open term in git root in all buffer
+" modes for :make :w (metal, with detached docker, remote)
+" replace binding to :build :make :lint
+" :make dir :lint dir
+" open term in git root in whole buffer
 " open term in git root in split below
 " open term in file dir below
 " open term from netrw in all buffer
@@ -68,10 +74,6 @@ nnoremap <leader>lex :Lex 25 <CR>
 " navigate to netrw buffer
 " navigate to code buffer
 " navigate to terminal buffer
-" netrw term code buffers navigation
-" hotkey to lint all project
-" hotkey to test all project
-" refactor compilers makeprg
 " ctags
 " ctags site-packages
 " completion
