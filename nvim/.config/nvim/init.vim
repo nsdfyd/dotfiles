@@ -1,4 +1,5 @@
 filetype plugin on 
+set nu
 set modifiable 
 set nobackup 
 set noswapfile
@@ -20,7 +21,8 @@ set fillchars+=vert:\
 let g:netrw_banner = 0
 let g:netrw_keepdir = 0
 syntax on 
-colorscheme 256_noir
+set termguicolors
+colorscheme onedark
 
 " Change highlighting of cursor line when entering/leaving Insert Mode
 set cursorline
@@ -45,7 +47,7 @@ endfunction
 
 autocmd BufEnter * silent! exec 'cd' fnameescape(fnamemodify(finddir('.git', 
       \escape(expand('%:p:h'), ' ') . ';'), ':h'))
-autocmd VimEnter * :Lex 25 | wincmd l
+"autocmd VimEnter * :Lex 25 | wincmd l
 
 let mapleader = "\<Space>"
 nnoremap <leader>term :terminal <CR> 
@@ -56,7 +58,6 @@ nnoremap <leader>cp :cp <CR>
 nnoremap <leader>bn :bn <CR> 
 nnoremap <leader>bp :bp <CR> 
 nnoremap <leader>bd :bd <CR> 
-nnoremap <leader>lex :Lex 25 <CR>
 
 " TODO
 " open term in git root in all buffer
