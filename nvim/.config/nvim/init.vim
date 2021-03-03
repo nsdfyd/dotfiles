@@ -1,7 +1,7 @@
 filetype plugin indent on 
-set autochdir
+"set autochdir
 set clipboard^=unnamed,unnamedplus
-set fillchars+=vert:\ 
+"set fillchars+=vert:\ 
 set nowrap
 set nu
 set shell=zsh
@@ -23,11 +23,13 @@ set tabstop=4
 
 set path+=** 
 set wildmenu
+set mouse+=a
 
 syntax on 
-set termguicolors
 colorscheme onedark
+set termguicolors
 hi Normal guibg=NONE ctermbg=NONE
+
 
 autocmd BufEnter * exec "silent! bdelete! " . bufnr("ranger")
 
@@ -48,12 +50,13 @@ tnoremap <M-t> <C-\><C-n>:call Term_toggle(15)<CR>
 nnoremap <M-g> :call Term_toggle_git_root(15)<CR>
 tnoremap <M-g> <C-\><C-n>:call Term_toggle_git_root(15)<CR>
 
+command! Gcd :cd `git rev-parse --show-toplevel`
 
 " TODO
 " :DockerBuild should build project image
 " :DockerRun should run docker image in daemon mode
 " :DockerKill should kill runned docker image
-" modes for :make :w (metal, with detached docker, remote)
+" modes for :make :w (metal, with detached docker, remote, and both)
 " metal should just works
 " :make should run tests in runned docker
 " :make fix format
