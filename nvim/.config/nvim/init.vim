@@ -1,70 +1,78 @@
-filetype plugin indent on 
-"set autochdir
 set clipboard^=unnamed,unnamedplus
-"set fillchars+=vert:\ 
+set autochdir
 set nowrap
-set nu
-set shell=zsh
-
-set keymap=russian-jcukenwin 
-
-set iminsert=0 
-set imsearch=0
-
-set modifiable 
-set nobackup 
 set noswapfile
-
-set autoindent 
-set backspace=indent,eol,start 
-set expandtab 
+set modifiable
+set rnu
+set autoindent
+set backspace=indent,eol,start
+set expandtab
 set shiftwidth=4
 set tabstop=4
-
-set path+=** 
-set wildmenu
 set mouse+=a
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
+call plug#begin('~/.config/nvim/plugged')
+Plug 'joshdick/onedark.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'kkvh/vim-docker-tools'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+call plug#end()
 
 syntax on 
 colorscheme onedark
 set termguicolors
 hi Normal guibg=NONE ctermbg=NONE
+let g:lightline = {
+      \ 'colorscheme': 'onedark',
+      \ }
 
 
-autocmd BufEnter * exec "silent! bdelete! " . bufnr("ranger")
+nmap gx :silent execute "!xdg-open " . shellescape("<cWORD>")<CR>
+nnoremap <leader>e :E <CR>
+nnoremap <leader>f :FZF <CR>
+nnoremap <leader>g :GFiles <CR>
+nnoremap <C-z> :call Term_toggle(15)<CR>
+tnoremap <C-z> <C-\><C-n>:call Term_toggle(15)<CR>
 
+set completeopt=menuone,noinsert,noselect
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
-let mapleader = "\<Space>"
-nnoremap <leader>copen :copen <CR> 
-nnoremap <leader>k evT<space>K
-nnoremap <leader>cw :cw <CR> 
-nnoremap <leader>cn :cn <CR> 
-nnoremap <leader>cp :cp <CR> 
-nnoremap <leader>bn :bn <CR> 
-nnoremap <leader>bp :bp <CR> 
-nnoremap <leader>bd :bd <CR> 
+"lua require('lspconfig').pyls_ms.setup{cmd = {"pyls"}}
+lua << EOF
+require'lspconfig'.pyls.setup{
+    cmd={"pyls"},
+    on_attach=require'completion'.on_attach
+}
+EOF
 
-nnoremap <M-e> :term ranger <CR>
-nnoremap <M-t> :call Term_toggle(15)<CR>
-tnoremap <M-t> <C-\><C-n>:call Term_toggle(15)<CR>
-nnoremap <M-g> :call Term_toggle_git_root(15)<CR>
-tnoremap <M-g> <C-\><C-n>:call Term_toggle_git_root(15)<CR>
-
-command! Gcd :cd `git rev-parse --show-toplevel`
+nnoremap gD :lua vim.lsp.buf.declaration()<CR>
+nnoremap gd :lua vim.lsp.buf.definition()<CR>
+nnoremap K :lua vim.lsp.buf.hover()<CR>
+nnoremap gi :lua vim.lsp.buf.implementation()<CR>
+nnoremap <C-k> :lua vim.lsp.buf.signature_help()<CR>
+nnoremap <space>wa :lua vim.lsp.buf.add_workspace_folder()<CR>
+nnoremap <space>wr :lua vim.lsp.buf.remove_workspace_folder()<CR>
+nnoremap <space>wl :lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>
+nnoremap <space>D :lua vim.lsp.buf.type_definition()<CR>
+nnoremap <space>rn :lua vim.lsp.buf.rename()<CR>
+nnoremap gr :lua vim.lsp.buf.references()<CR>
+nnoremap <space>e :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+nnoremap [d :lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap ]d :lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <space>q :lua vim.lsp.diagnostic.set_loclist()<CR>
+vnoremap <space>f :lua vim.lsp.buf.range_formatting()<CR>
 
 " TODO
-" :DockerBuild should build project image
-" :DockerRun should run docker image in daemon mode
-" :DockerKill should kill runned docker image
-" modes for :make :w (metal, with detached docker, remote, and both)
-" metal should just works
-" :make should run tests in runned docker
-" :make fix format
-" ranger toggle
-" :w should also run linter in runned docker
-" :lint should lint all in directory
-" hotkey to lint all project
-" ctags
-" ctags site-packages
-" debug workflow (variables, interactive shell)
-" databases integration (table completion, viewer, fast queries)
+"
+" remote (scp netrw), remote in docker, local, local in docker
+"   docker tools
+"   lsp server
+"   terminal, run something remote, tests for example
+"   debug workflow (variables, interactive shell) vim-inspector like in video
+"   databases integration (table completion, viewer, fast queries) dadbot
+"   postman
