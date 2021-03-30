@@ -71,6 +71,10 @@ _G.packer_plugins = {
   ["vim-polyglot"] = {
     loaded = true,
     path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/vim-polyglot"
+  },
+  ["vim-taskwarrior"] = {
+    loaded = true,
+    path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/vim-taskwarrior"
   }
 }
 

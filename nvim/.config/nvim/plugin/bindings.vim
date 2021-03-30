@@ -1,17 +1,20 @@
 let mapleader=","
-nmap <buffer> <C-z> :call Term_toggle(15)<CR>
-nnoremap <C-z> :call Term_toggle(15)<CR>
-tnoremap <C-z> <C-\><C-n>:call Term_toggle(15)<CR>
+nmap <buffer> <C-z> :call Term_toggle(15) <CR>
+nnoremap <C-z> :call Term_toggle(15) <CR>
+tnoremap <C-z> <C-\><C-n>:call Term_toggle(15) <CR>
 
-nnoremap <C-h> :tabprevious<CR>
-nnoremap <C-l> :tabnext<CR>
-nnoremap <C-t> :tabnew \| term <CR>
-inoremap <C-h> <Esc>:tabprevious<CR>
-inoremap <C-l> <Esc>:tabnext<CR>
-inoremap <C-t> <Esc>:tabnew \| term <CR>
-tnoremap <C-h> <C-\><C-n>:tabprevious<CR>
-tnoremap <C-l> <C-\><C-n>:tabnext<CR>
-tnoremap <C-t> <C-\><C-n>:tabnew <CR> :term<CR>
+nnoremap <C-h> :tabprevious <CR>
+nnoremap <C-l> :tabnext <CR>
+inoremap <C-h> <Esc>:tabprevious <CR>
+inoremap <C-l> <Esc>:tabnext <CR>
+tnoremap <C-h> <C-\><C-n>:tabprevious <CR>
+tnoremap <C-l> <C-\><C-n>:tabnext <CR>
+tnoremap <C-t> <C-\><C-n>:tabnew <CR> :term <CR>
+
+nnoremap <leader>git :tabnew \| Gstatus <CR> <C-w>o <CR>
+nnoremap <leader>tsk :tabnew \| TW <CR>
+nnoremap <leader>top :tabnew \| term htop <CR>
+nnoremap <leader>nws :tabnew \| term newsboat <CR> <C-w>o <CR>
 
 nnoremap <leader>h <C-W><C-h>
 nnoremap <leader>j <C-W><C-j>
