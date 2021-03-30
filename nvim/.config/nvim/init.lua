@@ -1,8 +1,7 @@
 require('plugins')
 require('settings')
 
-require('lspconfig').pyls.setup{
-	cmd={"pyls"},
+require('lspconfig').pyright.setup{
 	on_attach=require'completion'.on_attach
 }
 
