@@ -24,3 +24,8 @@ vim.wo.cursorline = true
 vim.wo.relativenumber = true
 vim.wo.signcolumn = 'yes'
 vim.wo.wrap = false
+
+vim.api.nvim_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+vim.cmd("autocmd TermOpen term://* startinsert | setlocal nonumber norelativenumber")
+vim.cmd("autocmd BufWinEnter,WinEnter term://* startinsert")

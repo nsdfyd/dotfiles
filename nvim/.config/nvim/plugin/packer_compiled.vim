@@ -12,8 +12,8 @@ packadd packer.nvim
 try
 
 lua << END
-local package_path_str = "/home/nsdfyd/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/nsdfyd/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/nsdfyd/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/nsdfyd/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/nsdfyd/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/aleksandrivanonv/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/aleksandrivanonv/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/aleksandrivanonv/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/aleksandrivanonv/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/aleksandrivanonv/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -34,47 +34,55 @@ end
 _G.packer_plugins = {
   ["completion-nvim"] = {
     loaded = true,
-    path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/completion-nvim"
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/completion-nvim"
+  },
+  fzf = {
+    loaded = true,
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/fzf"
   },
   ["fzf.vim"] = {
     loaded = true,
-    path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/fzf.vim"
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/fzf.vim"
   },
   ["nvim-dap"] = {
     loaded = true,
-    path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/nvim-dap"
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/nvim-dap"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["onedark.vim"] = {
     loaded = true,
-    path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/onedark.vim"
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/onedark.vim"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["vim-dadbod"] = {
     loaded = true,
-    path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/vim-dadbod"
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/vim-dadbod"
   },
   ["vim-dadbod-ui"] = {
     loaded = true,
-    path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui"
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
   ["vim-polyglot"] = {
     loaded = true,
-    path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/vim-polyglot"
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/vim-polyglot"
   },
   ["vim-taskwarrior"] = {
     loaded = true,
-    path = "/home/nsdfyd/.local/share/nvim/site/pack/packer/start/vim-taskwarrior"
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/vim-taskwarrior"
+  },
+  vimwiki = {
+    loaded = true,
+    path = "/Users/aleksandrivanonv/.local/share/nvim/site/pack/packer/start/vimwiki"
   }
 }
 
