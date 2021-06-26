@@ -3,9 +3,7 @@ vim.bo.shiftwidth = 12
 vim.bo.smartindent = true -- Makes indenting smart
 vim.bo.tabstop = 12
 
-vim.g.completion_enable_auto_popup = 0
-
-vim.o.autochdir = true
+vim.o.autochdir = false
 vim.o.backspace = 'indent,eol,start'
 vim.o.backup = false
 vim.o.clipboard = 'unnamedplus'
@@ -29,3 +27,9 @@ vim.api.nvim_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
 vim.cmd("autocmd TermOpen term://* startinsert | setlocal nonumber norelativenumber")
 vim.cmd("autocmd BufWinEnter,WinEnter term://* startinsert")
+vim.cmd("set rtp+=~/.local/share/nvim/site/pack/packer/start/himalaya/vim")
+vim.cmd [[
+	syntax on
+	colorscheme onedark
+	hi Normal guibg=NONE ctermbg=NONE
+]]
