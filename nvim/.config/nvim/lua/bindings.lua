@@ -29,3 +29,21 @@ map('n', '<space>k', '<C-W><C-k>', {noremap = true})
 map('n', '<space>l', '<C-W><C-l>', {noremap = true})
 
 map('n', '<C-n>', '<C-x><C-o>', {noremap = true})
+
+--map('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', {noremap = true})
+--map('n', 'K', ':lua vim.lsp.buf.hover()<CR>', {noremap = true})
+--map('n', '<space>rn', ':lua vim.lsp.buf.rename()<CR>', {noremap = true})
+--map('n', '[d', ':lua vim.lsp.diagnostic.goto_prev()<CR>', {noremap = true})
+--map('n', ']d', ':lua vim.lsp.diagnostic.goto_next()<CR>', {noremap = true})
+--map('n', '<space>q', ':lua vim.lsp.diagnostic.set_loclist()<CR>', {noremap = true})
+--map('n', '<space>f', ':lua vim.lsp.buf.range_formatting()<CR>', {noremap = true})
+
+
+map('n', '<space>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>', {noremap = true})
+map('n', '<space>fg', '<cmd>lua require("telescope.builtin").live_grep()<cr>', {noremap = true})
+map('n', '<space>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>', {noremap = true})
+map('n', '<space>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>', {noremap = true})
+--map('n', '<space>f', ':FZF <CR>', {noremap = true})
+--map('n', '<space>g', ':GFiles <CR>', {noremap = true})
+
+--map('n', '<space>git', ':tabnew \| Gstatus <CR> <C-w>o <CR>', {noremap = true})

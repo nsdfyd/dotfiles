@@ -1,20 +1,18 @@
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  -- functionality
+  -- visual stuff
   use 'joshdick/onedark.vim'
   use 'sheerun/vim-polyglot'
-  use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
+  -- functionality
   use {
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
   use 'neovim/nvim-lspconfig'
-  use 'folke/which-key.nvim'
   -- interfaces 
-  use 'soywod/himalaya'
   use 'tpope/vim-fugitive'
-  use 'farseer90718/vim-taskwarrior'
+  --use 'soywod/himalaya'
+  --use 'farseer90718/vim-taskwarrior'
   --use 'kkvh/vim-docker-tools'
   --use 'skanehira/docker.vim'
   --use 'tpope/vim-dadbod'
