@@ -9,8 +9,8 @@ return require('packer').startup(function(use)
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
   use 'neovim/nvim-lspconfig'
+  use 'voldikss/vim-floaterm'
   -- interfaces 
-  use 'tpope/vim-fugitive'
   --use 'soywod/himalaya'
   --use 'farseer90718/vim-taskwarrior'
   --use 'kkvh/vim-docker-tools'
