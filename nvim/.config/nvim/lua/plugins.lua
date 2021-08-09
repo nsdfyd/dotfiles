@@ -1,6 +1,6 @@
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  -- visual stuff
+ -- visual stuff
   use 'joshdick/onedark.vim'
   use 'sheerun/vim-polyglot'
   -- functionality
@@ -10,15 +10,12 @@ return require('packer').startup(function(use)
   }
   use 'neovim/nvim-lspconfig'
   use 'voldikss/vim-floaterm'
+  use 'tpope/vim-dadbod'
+  use 'kristijanhusak/vim-dadbod-ui'
   -- interfaces 
+  -- databases telescope
   --use 'soywod/himalaya'
-  --use 'farseer90718/vim-taskwarrior'
-  --use 'kkvh/vim-docker-tools'
-  --use 'skanehira/docker.vim'
-  --use 'tpope/vim-dadbod'
-  --use 'kristijanhusak/vim-dadbod-ui'
   -- postman
-  --use 'ojroques/nvim-lspfuzzy'
   --use 'mfussenegger/nvim-dap'
   --use 'vimwiki/vimwiki'
 end)
