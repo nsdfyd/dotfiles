@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
   use 'voldikss/vim-floaterm'
   use 'tpope/vim-dadbod'
   use 'kristijanhusak/vim-dadbod-ui'
+  use 'vimwiki/vimwiki'
   -- interfaces 
   -- databases telescope
   --use 'soywod/himalaya'

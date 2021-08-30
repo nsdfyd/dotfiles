@@ -17,42 +17,32 @@ map('n', '<space>q', ':lua vim.lsp.diagnostic.set_loclist()<CR>', {noremap = tru
 map('n', '<space>f', ':lua vim.lsp.buf.range_formatting()<CR>', {noremap = true})
 
 
-map('n', '<space>ff', '<cmd>lua require("telescope.builtin").find_files()<CR>', {noremap = true})
-map('n', '<space>fg', '<cmd>lua require("telescope.builtin").live_grep()<CR>', {noremap = true})
-map('n', '<space>fb', '<cmd>lua require("telescope.builtin").buffers()<CR>', {noremap = true})
-map('n', '<space>fh', '<cmd>lua require("telescope.builtin").help_tags()<CR>', {noremap = true})
+map('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<CR>', {noremap = true})
+map('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<CR>', {noremap = true})
+map('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<CR>', {noremap = true})
+map('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<CR>', {noremap = true})
 
 
-map('n', '<C-t>', ':FloatermToggle<CR>', {noremap=true})
-map('t', '<C-t>', '<C-\\><C-n>:FloatermToggle<CR>', {noremap=true})
+map('n', '<leader>t', ':FloatermToggle<CR>', {noremap=true})
+map('t', '<leader>t', '<C-\\><C-n>:FloatermToggle<CR>', {noremap=true})
 
-map('n', '<C-k>', ':FloatermPrev<CR>', {noremap=true})
-map('t', '<C-k>', '<C-\\><C-n>:FloatermPrev<CR>', {noremap=true})
+map('n', '<leader>k', ':FloatermPrev<CR>', {noremap=true})
+map('t', '<leader>k', '<C-\\><C-n>:FloatermPrev<CR>', {noremap=true})
 
-map('n', '<C-j>', ':FloatermNext<CR>', {noremap=true})
-map('t', '<C-j>', '<C-\\><C-n>:FloatermNext<CR>', {noremap=true})
+map('n', '<leader>j', ':FloatermNext<CR>', {noremap=true})
+map('t', '<leader>j', '<C-\\><C-n>:FloatermNext<CR>', {noremap=true})
 
-map('n', '<C-q>', ':FloatermKill<CR>', {noremap=true})
-map('t', '<C-q>', '<C-\\><C-n>:FloatermKill<CR>', {noremap=true})
+map('n', '<leader>q', ':FloatermKill<CR>', {noremap=true})
+map('t', '<leader>q', '<C-\\><C-n>:FloatermKill<CR>', {noremap=true})
 
-map('n', '<C-\\>tm', ':FloatermNew<CR>', {noremap=true})
-map('t', '<C-\\>tm', '<C-\\><C-n>:FloatermNew<CR>', {noremap=true})
+map('n', '<leader>nt', ':FloatermNew<CR>', {noremap=true})
+map('t', '<leader>nt', '<C-\\><C-n>:FloatermNew<CR>', {noremap=true})
 
-map('n', '<C-\\>el', ':FloatermNew ranger<CR>', {noremap=true})
-map('t', '<C-\\>el', '<C-\\><C-n>:FloatermNew ranger<CR>', {noremap=true})
+map('n', '<leader>e', ':FloatermNew ranger<CR>', {noremap=true})
+map('t', '<leader>e', '<C-\\><C-n>:FloatermNew ranger<CR>', {noremap=true})
 
-map('n', '<C-\\>top', ':FloatermNew htop<CR>', {noremap=true})
-map('t', '<C-\\>top', '<C-\\><C-n>:FloatermNew htop<CR>', {noremap=true})
+map('n', '<leader>p', ':FloatermNew ipython<CR>', {noremap=true})
+map('t', '<leader>p', '<C-\\><C-n>:FloatermNew ipython<CR>', {noremap=true})
 
-map('n', '<C-\\>py', ':FloatermNew ipython<CR>', {noremap=true})
-map('t', '<C-\\>py', '<C-\\><C-n>:FloatermNew ipython<CR>', {noremap=true})
-
-map('n', '<C-\\>lg', ':FloatermNew lazygit<CR>', {noremap=true})
-map('t', '<C-\\>lg', '<C-\\><C-n>:FloatermNew lazygit<CR>', {noremap=true})
-
-map('v', '<C-\\><C-\\>', ':FloatermSend<CR>', {noremap=true})
-map('n', '<C-\\><C-\\>', ':FloatermSend<CR>', {noremap=true})
-
-map('v', '<C-\\>mt', ':FloatermNew neomutt<CR>', {noremap=true})
-map('n', '<C-\\>mt', ':FloatermNew neomutt<CR>', {noremap=true})
-
+map('v', '<leader><leader>', ':FloatermSend<CR>', {noremap=true})
+map('n', '<leader><leader>', ':FloatermSend<CR>', {noremap=true})
