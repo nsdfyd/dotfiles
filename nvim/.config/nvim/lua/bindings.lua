@@ -35,11 +35,11 @@ map('t', '<C-j>', '<C-\\><C-n>:FloatermNext<CR>', {noremap=true})
 map('n', '<C-q>', ':FloatermKill<CR>', {noremap=true})
 map('t', '<C-q>', '<C-\\><C-n>:FloatermKill<CR>', {noremap=true})
 
-map('n', '<C-\\>term', ':FloatermNew<CR>', {noremap=true})
-map('t', '<C-\\>term', '<C-\\><C-n>:FloatermNew<CR>', {noremap=true})
+map('n', '<C-\\>tm', ':FloatermNew<CR>', {noremap=true})
+map('t', '<C-\\>tm', '<C-\\><C-n>:FloatermNew<CR>', {noremap=true})
 
-map('n', '<C-\\>ex', ':FloatermNew ranger<CR>', {noremap=true})
-map('t', '<C-\\>ex', '<C-\\><C-n>:FloatermNew ranger<CR>', {noremap=true})
+map('n', '<C-\\>el', ':FloatermNew ranger<CR>', {noremap=true})
+map('t', '<C-\\>el', '<C-\\><C-n>:FloatermNew ranger<CR>', {noremap=true})
 
 map('n', '<C-\\>top', ':FloatermNew htop<CR>', {noremap=true})
 map('t', '<C-\\>top', '<C-\\><C-n>:FloatermNew htop<CR>', {noremap=true})
