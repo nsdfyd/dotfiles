@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
   use 'kristijanhusak/vim-dadbod-ui'
   use 'vimwiki/vimwiki'
   use 'plasticboy/vim-markdown'
+  use 'mipmip/vim-scimark'
   -- interfaces 
   -- databases telescope
   --use 'soywod/himalaya'

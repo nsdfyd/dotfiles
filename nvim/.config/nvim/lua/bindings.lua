@@ -26,11 +26,11 @@ map('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<CR>', 
 map('n', '<leader>t', ':FloatermToggle<CR>', {noremap=true})
 map('t', '<leader>t', '<C-\\><C-n>:FloatermToggle<CR>', {noremap=true})
 
-map('n', '<leader>k', ':FloatermPrev<CR>', {noremap=true})
-map('t', '<leader>k', '<C-\\><C-n>:FloatermPrev<CR>', {noremap=true})
+map('n', '<leader><Tab>', ':FloatermPrev<CR>', {noremap=true})
+map('t', '<leader><Tab>', '<C-\\><C-n>:FloatermPrev<CR>', {noremap=true})
 
-map('n', '<leader>j', ':FloatermNext<CR>', {noremap=true})
-map('t', '<leader>j', '<C-\\><C-n>:FloatermNext<CR>', {noremap=true})
+map('n', '<leader>]<Tab>', ':FloatermNext<CR>', {noremap=true})
+map('t', '<leader>]<Tab>', '<C-\\><C-n>:FloatermNext<CR>', {noremap=true})
 
 map('n', '<leader>q', ':FloatermKill<CR>', {noremap=true})
 map('t', '<leader>q', '<C-\\><C-n>:FloatermKill<CR>', {noremap=true})
@@ -41,8 +41,8 @@ map('t', '<leader>nt', '<C-\\><C-n>:FloatermNew<CR>', {noremap=true})
 map('n', '<leader>e', ':FloatermNew ranger<CR>', {noremap=true})
 map('t', '<leader>e', '<C-\\><C-n>:FloatermNew ranger<CR>', {noremap=true})
 
-map('n', '<leader>p', ':FloatermNew ipython<CR>', {noremap=true})
-map('t', '<leader>p', '<C-\\><C-n>:FloatermNew ipython<CR>', {noremap=true})
+map('n', '<leader>p', ':FloatermNew ipython --TerminalInteractiveShell.editing_mode=vi<CR>', {noremap=true})
+map('t', '<leader>p', '<C-\\><C-n>:FloatermNew --TerminalInteractiveShell.editing_mode=vi<CR>', {noremap=true})
 
 map('v', '<leader><leader>', ':FloatermSend<CR>', {noremap=true})
 map('n', '<leader><leader>', ':FloatermSend<CR>', {noremap=true})
