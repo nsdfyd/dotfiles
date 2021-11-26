@@ -1,24 +1,16 @@
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
- -- visual stuff
   use 'joshdick/onedark.vim'
-  use 'sheerun/vim-polyglot'
-  -- functionality
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
-  }
-  use 'neovim/nvim-lspconfig'
-  use 'voldikss/vim-floaterm'
-  use 'tpope/vim-dadbod'
-  use 'kristijanhusak/vim-dadbod-ui'
-  use 'vimwiki/vimwiki'
-  use 'plasticboy/vim-markdown'
   use 'mipmip/vim-scimark'
+  use 'neovim/nvim-lspconfig'
+  use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use 'plasticboy/vim-markdown'
+  use 'vimwiki/vimwiki'
+  use 'voldikss/vim-floaterm'
+  use 'mfussenegger/nvim-dap'
   -- interfaces 
   -- databases telescope
-  --use 'soywod/himalaya'
+  -- use 'soywod/himalaya'
   -- postman
-  --use 'mfussenegger/nvim-dap'
-  --use 'vimwiki/vimwiki'
 end)

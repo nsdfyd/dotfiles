@@ -7,7 +7,6 @@ function _G.smart_tab()
     return vim.fn.pumvisible() == 1 and t'<C-n>' or t'<Tab>'
 end
 
-
 map('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', {noremap = true})
 map('n', 'K', ':lua vim.lsp.buf.hover()<CR>', {noremap = true})
 map('n', '<space>rn', ':lua vim.lsp.buf.rename()<CR>', {noremap = true})
@@ -20,7 +19,8 @@ map('n', '<space>f', ':lua vim.lsp.buf.range_formatting()<CR>', {noremap = true}
 map('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<CR>', {noremap = true})
 map('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<CR>', {noremap = true})
 map('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<CR>', {noremap = true})
-map('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<CR>', {noremap = true})
+map('n', '<leader>fm', '<cmd>lua require("telescope.builtin").file_browser()<CR>', {noremap = true})
+map('n', '<leader>gr', [[<cmd>lua require('telescope.builtin').grep_string()<CR>]], { silent = true, noremap = true })
 
 
 map('n', '<leader>t', ':FloatermToggle<CR>', {noremap=true})

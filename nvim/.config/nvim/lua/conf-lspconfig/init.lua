@@ -4,7 +4,7 @@ require'lspconfig'.cmake.setup{}
 require'lspconfig'.dockerls.setup{}
 require'lspconfig'.html.setup{}
 require'lspconfig'.phpactor.setup{}
-require'lspconfig'.pyright.setup{}
+require'lspconfig'.pylsp.setup{}
 require'lspconfig'.sqls.setup{}
 require'lspconfig'.texlab.setup{}
 require'lspconfig'.tsserver.setup{}
